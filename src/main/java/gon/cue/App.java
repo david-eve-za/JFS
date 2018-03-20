@@ -1,5 +1,7 @@
 package gon.cue;
 
+import gon.cue.model.crud.Operations;
+
 /**
  * Hello world!
  *
@@ -8,6 +10,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        //Operations.getOperations().createDataBase();
+        Operations.getOperations().close();
     }
 }
