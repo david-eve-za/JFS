@@ -9,6 +9,10 @@ import org.jooq.impl.DSL;
 public class Operations extends JOOQUtil {
     private final static Operations _operations = new Operations();
 
+    static {
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> getOperations().closeConnection()));
+    }
+
     public static Operations getOperations() {
         return _operations;
     }
